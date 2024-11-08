@@ -1,7 +1,8 @@
-<!DOCTYPE html>
 {% load static %}
 {%load mathfilters%}
 {%load humanize%}
+<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,8 +22,8 @@
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-8 text-center">
-                  <img src="{% static 'khajameter\static\images\rejina1.png' %}" class="img-responsive logo mb-5 mt-5" />
-                  <form method="POST">
+                <img src="{% static 'images/rejina1.png'  %}" class="img-responsive logo mb-5 mt-5" />
+                <form method="POST">
                       {%csrf_token%}
                       <div class="input-group input-group-lg mb-5">
                       <input type="text" name="query" class="form-control inputstyle" placeholder="search for calories in your food..." required>
@@ -67,7 +68,7 @@
                               <li>Total Fat: <span class="float-end">{{api.0.fat_saturated_g}}</span></li>
                               <li>Fiber Content: <span class="float-end">{{api.0.fat_total_g}}</span></li>
                               <li>Potassium <span class="float-end">{{api.0.potassium_mg}}</span></li>
-                              <li>Protein: <span class="float-end">{{api.0.protein_g}}</span></li>
+                              <!-- <li>Protein: <span class="float-end">{{api.0.protein_g}}</span></li> -->
                               <li>Sodium:<span class="float-end">{{api.0.sodium_mg}}</span></li>
                               <li>Sugar: <span class="float-end">{{api.0.sugar_g}}</span></li>
                           </ul>
@@ -103,8 +104,8 @@
                           </div>
                           <div class="d-flex align-items-center">
                               <div class="flex-shrink-0">
-                                  <img src="{% static 'images/walking.png' %}" alt="...">
-                              </div>
+                                <img src="{% static 'images/walking.png' %}" alt="...">
+                            </div>
                               <div class="flex-grow-1 ms-1">
                                   <h5> Go for a Brisk Walk </h5>
                                   <p>you will have to brisk walk for <strong> {{api.0.calories | div:294|mul:60|floatformat:0}}  </strong> Minutes</p>
