@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-{% load static %} {%load mathfilters%} {%load humanize%}
+{% load static %}
+{%load mathfilters%}
+{%load humanize%}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,14 +14,14 @@
       crossorigin="anonymous"
     />
     <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
-    <title>Foodie Calorie Finder</title>
+    <title>Food Calorie Meter</title>
   </head>
 
   <body>
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-md-8 text-center">
-                  <img src="{% static 'images/logo.png' %}" class="img-responsive logo mb-5 mt-5" />
+                  <img src="{% static 'khajameter\static\images\rejina1.png' %}" class="img-responsive logo mb-5 mt-5" />
                   <form method="POST">
                       {%csrf_token%}
                       <div class="input-group input-group-lg mb-5">
