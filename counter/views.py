@@ -10,9 +10,9 @@ def home(request):
     import requests
     if request.method == 'POST':
         query = request.POST['query']
-        api_url = 'https://api.api-ninjas.com/v1/nutrition?query='
+        api_url = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=5NJaf3OLtVCzHbtXEmemrzcpf1X2Oa6OBjccHaue'
         api_request = requests.get(
-            api_url + query, headers={'X-Api-Key': 'KmDgeps/w+IBmZrDMzFy3g==FY9Re3n6fUNOZUYs'})
+            api_url + query, headers={'X-Api-Key': '5NJaf3OLtVCzHbtXEmemrzcpf1X2Oa6OBjccHaue'})
         try:
             api = json.loads(api_request.content)
             print(api_request.content)
